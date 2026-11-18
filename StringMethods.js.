@@ -1,0 +1,93 @@
+
+// ========================================
+// JavaScript String Methods Practice
+// ========================================
+
+// 1. String Declaration
+let s1 = "Renu";
+let s2 = 'Renu';
+let s3 = `Hi, ${s1}`;
+
+console.log("Template Literal:", s3);
+
+
+// 2. String Concatenation
+s1 = s1 + " Sri";
+console.log("Concatenation:", s1);
+
+let s4 = s1.concat(" ", s2);
+console.log("Using concat():", s4);
+
+
+// 3. split() and trim()
+let userInput = "Renu|renu@gmail.com|IS a good girl";
+
+let parts = userInput.split("|");
+
+let name = parts[0].trim();
+let email = parts[1].trim();
+let bio = parts[2].trim();
+
+console.log("\n--- Split and Trim ---");
+console.log("Name:", name);
+console.log("Email:", email);
+console.log("Bio:", bio);
+
+
+// 4. Changing String Case
+name = name.toUpperCase();
+email = email.toLowerCase();
+bio = bio.toUpperCase();
+
+console.log("\n--- Case Conversion ---");
+console.log("Uppercase Name:", name);
+console.log("Lowercase Email:", email);
+console.log("Uppercase Bio:", bio);
+
+
+// 5. includes()
+let likes = bio.includes("GOOD");
+console.log("\nContains GOOD:", likes);
+
+
+// 6. indexOf() and lastIndexOf()
+console.log("\n--- Searching Strings ---");
+console.log("Index of IS:", bio.indexOf("IS"));
+console.log("Last Index of IS:", bio.lastIndexOf("IS"));
+
+
+// 7. replace()
+bio = bio.replace("IS", "RENU");
+console.log("\nUpdated Bio:", bio);
+
+
+// 8. slice()
+console.log("\n--- Slice Method ---");
+console.log("From Index 5:", bio.slice(5));
+console.log("Index 0 to 4:", bio.slice(0, 4));
+
+
+// 9. length
+console.log("\nBio Length:", bio.length);
+
+
+// 10. Email Validation
+let validEmail = email.includes("@") && email.endsWith(".com");
+console.log("\nIs Email Valid:", validEmail);
+
+
+// 11. repeat()
+let separator = "-".repeat(30);
+
+
+// 12. User Profile
+let finalProfile = `
+USER PROFILE
+${separator}
+Name  : ${name.trim()}
+Email : ${email.trim()}
+Bio   : ${bio.trim()}
+${separator}
+`;
+
+console.log(finalProfile);
